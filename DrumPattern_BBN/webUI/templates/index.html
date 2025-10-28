@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drum Pattern Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Select Drum Style</h1>
+    <form action="/generate" method="post">
+        <label for="genre">Choose genre:</label>
+        <select name="genre" id="genre" required>
+            <option value="rock">Rock</option>
+            <option value="jazz">Jazz</option>
+            <option value="latin">latin</option>
+            <option value="contemporary">contemporary</option>
+            <option value="dance">dance</option>
+            <option value="folk">folk</option>
+        </select>
+        <br><br>
+        <button type="submit">Go</button>
+    </form>
+</body>
+</html>

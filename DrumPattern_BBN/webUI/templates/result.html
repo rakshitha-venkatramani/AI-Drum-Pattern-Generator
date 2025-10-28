@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generated Loop</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Your Drum Loop is Ready!</h1>
+    
+    <audio controls>
+      <source src="{{ url_for('static', filename='midi/' + midi_file) }}" type="audio/midi">
+      Your browser does not support MIDI playback.
+    </audio>
+    
+    <br><br>
+    <a href="{{ url_for('download_file', filename=midi_file) }}">Download MIDI File</a>
+    
+
+</body>
+</html>
